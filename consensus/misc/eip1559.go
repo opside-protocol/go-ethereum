@@ -87,7 +87,9 @@ func CalcBaseFee(config *params.ChainConfig, parent *types.Header) *big.Int {
 		num.Div(num, denom.SetUint64(parentGasTarget))
 		num.Div(num, denom.SetUint64(config.BaseFeeChangeDenominator()))
 		baseFee := num.Sub(parent.BaseFee, num)
-
+		if baseFee.Uint64() < params.MinLimitBaseFee {
+			baseFee.SetUint64(params.MinLimitBaseFee)
+		}
 		return math.BigMax(baseFee, common.Big0)
 	}
 }

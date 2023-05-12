@@ -120,9 +120,10 @@ const (
 	// Introduced in Tangerine Whistle (Eip 150)
 	CreateBySelfdestructGas uint64 = 25000
 
-	DefaultBaseFeeChangeDenominator = 8          // Bounds the amount the base fee can change between blocks.
-	DefaultElasticityMultiplier     = 2          // Bounds the maximum gas limit an EIP-1559 block may have.
-	InitialBaseFee                  = 1000000000 // Initial base fee for EIP-1559 blocks.
+	DefaultBaseFeeChangeDenominator = 8             // Bounds the amount the base fee can change between blocks.
+	DefaultElasticityMultiplier     = 2             // Bounds the maximum gas limit an EIP-1559 block may have.
+	InitialBaseFee                  = 1001000000000 // Initial base fee for EIP-1559 blocks.
+	MinLimitBaseFee                 = 1000000000000 // The minimum limit BaseFee needs to be consistent with the PriceLimit in txpool.
 
 	MaxCodeSize     = 24576           // Maximum bytecode to permit for a contract
 	MaxInitCodeSize = 2 * MaxCodeSize // Maximum initcode to permit in a creation transaction and create instructions
