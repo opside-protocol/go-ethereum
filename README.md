@@ -1,6 +1,6 @@
 ## Opside-Chain Execution Client Based on Go-ethereum Fork
 
-Official Golang execution layer implementation of the Ethereum protocol.
+Opside-Chain Golang execution layer implementation of the Ethereum protocol.
 
 ## Getting Started
 
